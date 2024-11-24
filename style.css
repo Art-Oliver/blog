@@ -1,0 +1,78 @@
+/* Reset básico */
+* { /* Aplica regras para todos os elementos da página */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o espaçamento interno padrão */
+    box-sizing: border-box; /* Inclui a borda e o padding no tamanho total dos elementos */
+}
+
+body { /* Estiliza o corpo da página */
+    font-family: Arial, sans-serif; /* Define a fonte como Arial ou uma genérica sans-serif */
+    background-color: #f8f8f8; /* Define a cor de fundo da página */
+    color: #333; /* Define a cor do texto principal */
+    line-height: 1.6; /* Define o espaçamento entre linhas */
+}
+
+/* Cabeçalho */
+header { /* Estiliza o cabeçalho */
+    display: flex; /* Usa Flexbox para alinhar os itens dentro do cabeçalho */
+    justify-content: space-between; /* Alinha os itens no espaço disponível (logo à esquerda, menu à direita) */
+    align-items: center; /* Centraliza verticalmente os itens */
+    padding: 20px 40px; /* Define espaçamento interno: 20px em cima/baixo e 40px nas laterais */
+    background-color: #ffffff; /* Cor de fundo branca para o cabeçalho */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil abaixo do cabeçalho */
+}
+
+.nome-do-blog { /* Estiliza o texto da logo */
+    font-size: 24px; /* Tamanho da fonte da logo */
+    font-weight: bold; /* Define a fonte como negrito */
+}
+
+.menu a { /* Estiliza os links do menu */
+    margin-left: 20px; /* Adiciona espaçamento à esquerda de cada link */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #333; /* Define a cor do texto dos links */
+    font-size: 16px; /* Define o tamanho do texto dos links */
+}
+
+.menu a:hover { /* Estilo quando o mouse passa sobre os links */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: rgb(99, 177, 241);
+    font-weight: 500;
+}
+
+/* Layout principal */
+.noticia-principal { /* Estiliza a área principal da página */
+    display: flex; /* Usa Flexbox para alinhar os elementos (imagem e texto) lado a lado */
+    flex-direction: row; /* Garante que os elementos sejam alinhados horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    margin: 40px auto; /* Adiciona espaçamento acima/abaixo e centraliza horizontalmente */
+    max-width: 1500px; /* Define uma largura máxima para o layout */
+    padding: 20px; /* Adiciona espaçamento interno */
+    background-color: #ffffff; /* Define um fundo branco para o contêiner principal */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+    border-radius: 10px; /* Arredonda os cantos do contêiner */
+}
+
+/* Imagem */
+.imagem-da-noticia-principal img { /* Estiliza a imagem dentro do contêiner */
+    max-width: 500px; /* Define uma largura máxima para a imagem */
+    border-radius: 10px; /* Arredonda os cantos da imagem */
+}
+
+/* Texto */
+.texto-da-noticia-principal { /* Estiliza o contêiner de texto */
+    margin-left: 40px; /* Adiciona espaçamento à esquerda do texto */
+}
+
+.texto-da-noticia-principal h2 { /* Estiliza o título */
+    font-size: 30px; /* Define o tamanho da fonte do título */
+    color: #333; /* Define a cor do texto do título (cinza claro) */
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo do título */
+}
+
+.texto-da-noticia-principal p { /* Estiliza o parágrafo */
+    font-size: 20px; /* Define o tamanho da fonte do texto principal */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #888; /* Define a cor do texto principal (cinza escuro) */
+}
