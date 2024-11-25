@@ -10,12 +10,11 @@
 <body>
     <!-- Cabeçalho -->
     <header>
-        <div class="nome-do-blog">Tech & Innovation</div>
+        <div class="nome-do-blog" id="topo">Tech & Innovation</div>
         <nav class="menu">
-            <a href="#">Blog</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
-            <a href="#">Entra/Cadastro</a>
+            <a href="index.html">Blog</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="cadastro.html">Entra/Cadastro</a>
         </nav>
     </header>
 
@@ -86,6 +85,32 @@
         </form>
     </section>
     
+    <footer class="rodape">
+        <div class="container-rodape">
+            <div class="sobre-nos">
+                <h4>Sobre Nós</h4>
+                <p>Fornecemos as últimas notícias com precisão e confiabilidade. Acompanhe-nos nas redes sociais!</p>
+            </div>
+            <div class="links-uteis">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="#politica-privacidade">Política de Privacidade</a></li>
+                    <li><a href="#termos-uso">Termos de Uso</a></li>
+                    <li><a href="#contato">Fale Conosco</a></li>
+                </ul>
+            </div>
+            <div class="redes-sociais">
+                <h4>Redes Sociais</h4>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="direitos">
+            <p>&copy; 2024 Tech & Innovation - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
 
     <script>
         document.getElementById("add-noticia").addEventListener("submit", function (e) {
@@ -116,9 +141,8 @@
 
     // Limpa o formulário para permitir outra inserção
     document.getElementById("add-noticia").reset();
-});
+    });
 
     </script>
-
 </body>
 </html>
