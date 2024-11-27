@@ -77,23 +77,11 @@ $logged_in = isset($_SESSION['usuario_id']);
     </section>
 
     <?php if ($logged_in): ?>
-        <section class="formulario">
-            <h2>Adicionar Nova Notícia</h2>
-            <form id="add-noticia" class="noticia-form">
-                <label for="titulo-da-noticia">Título:</label>
-                <input type="text" id="titulo-da-noticia" name="titulo-da-noticia" placeholder="Digite o título da notícia" required>
-        
-                <label for="data-da-noticia">Data:</label>
-                <input type="date" id="data-da-noticia" name="data-da-noticia" required>
-        
-                <label for="texto-da-noticia">Descrição:</label>
-                <textarea id="texto-da-noticia" name="texto-da-noticia" rows="3" placeholder="Digite uma breve descrição" required></textarea>
-        
-                <label for="news-image">URL da Imagem:</label>
-                <input type="url" id="news-image" name="news-image" placeholder="Cole o link da imagem" required>
-        
-                <button type="submit" class="form-button">Adicionar Notícia</button>
-            </form>
+        <!-- Botão para redirecionar para criar notícias -->
+        <section class="botao-criar-noticia">
+            <div style="text-align: center; margin: 20px;">
+                <a href="criar_noticias.php" class="botao-publicar-noticia">Ir para Criar Notícia</a>
+            </div>
         </section>
     <?php endif; ?>
 
@@ -122,29 +110,5 @@ $logged_in = isset($_SESSION['usuario_id']);
             <p>&copy; 2024 Tech & Innovation - Todos os direitos reservados.</p>
         </div>
     </footer>
-
-    <script>
-        <?php if ($logged_in): ?>
-        document.getElementById("add-noticia").addEventListener("submit", function (e) {
-            e.preventDefault();
-            const title = document.getElementById("titulo-da-noticia").value;
-            const date = document.getElementById("data-da-noticia").value;
-            const description = document.getElementById("texto-da-noticia").value;
-            const image = document.getElementById("news-image").value;
-            const newArticle = document.createElement("article");
-            newArticle.classList.add("noticias");
-            newArticle.innerHTML = `
-                <img src="${image}" alt="${title}">
-                <div class="conteudo-da-noticia">
-                    <p class="data-da-noticia">${date}</p>
-                    <h3 class="titulo-da-noticia">${title}</h3>
-                    <p class="texto-da-noticia">${description}</p>
-                </div>
-            `;
-            document.querySelector(".area-noticias").appendChild(newArticle);
-            document.getElementById("add-noticia").reset();
-        });
-        <?php endif; ?>
-    </script>
 </body>
 </html>
